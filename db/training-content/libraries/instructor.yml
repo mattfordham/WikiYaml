@@ -1,0 +1,5 @@
+name: Instructor
+modules:
+  - module-a
+  - module-b
+  - module-c

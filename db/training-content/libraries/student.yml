@@ -1,0 +1,5 @@
+name: Student
+modules:
+  - module-a
+  - module-b
+  - module-c

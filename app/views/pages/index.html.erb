@@ -1,0 +1,22 @@
+<% for training_library in @libraries %>
+
+  <ul class="list-group">
+    <li class="list-group-item"><strong><%= training_library.name %></strong> <em>(<%= training_library.slug %>)</em></li>
+    <li class="list-group-item">
+      Modules
+      <ul>
+      <% for training_module in training_library.modules %>
+        <li><strong><%= training_module.name %></strong> <em>(<%= training_module.slug %>)</em>
+          <ul>
+          <% for training_slide in training_module.slides %>
+            <li><strong><%= training_slide.name %></strong> <em>(<%= training_slide.slug %>)</em></li>
+            <li>Content: <%= training_slide.content %></li>
+          <% end %>
+          </ul>        
+        </li>
+      <% end %>
+      </ul>
+    </li>
+  </ul>
+    
+<% end %>
